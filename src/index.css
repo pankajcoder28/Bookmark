@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import 'tailwindcss';
+
+@theme{
+    --font-rubik: 'Rubik', sans-serif;
+}
+
+@media(min-width: 1120px){
+    .bg-hero{
+        width: 1000px;
+        height: 300px;
+        left: 30%;
+        @apply absolute rounded-l-full top-55 bg-blue-500;
+    }
+    .bg-tabs{
+        width: 1000px;
+        height: 300px;
+        right: 60%;
+        @apply absolute rounded-r-full top-60 bg-blue-500;
+    }
+}
+
+.hamburger{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:0;
+    left:0;
+    background: #000;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-middle{
+    transform: translateY(7px);
+}
+.hamburger-bottom{
+    transform: translateY(14px);
+}
+.open{
+    transform: rotate(90deg);
+    transform: translateY(0px);
+    position: fixed;
+    top: 50px;
+    right: 50px;
+
+}
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+    background-color: white;
+}
+.open .hamburger-middle{
+    opacity: 0;
+}
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    background-color: white;
+}
