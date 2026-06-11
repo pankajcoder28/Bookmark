@@ -42,13 +42,13 @@ function App() {
                 features
               </a>
               <a
-                href="#download-boxes"
+                href="#download"
                 className="tracking-widest hover:text-red-400"
               >
                 download
               </a>
               <a
-                href="#features"
+                href="#faq"
                 className="tracking-widest hover:text-red-400"
               >
                 fAQ
